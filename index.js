@@ -9,7 +9,9 @@ let tasks = [
   { id: 1, name: 'Task 1', description: 'Description 1', status: 'Incomplete' },
   { id: 2, name: 'Task 2', description: 'Description 2', status: 'Incomplete' },
 ];
-
+app.get('/tasks', (req, res) => {
+  res.status(200).json(tasks);
+});
 app.get('/tasks/:id', (req, res) => {
   const taskId = parseInt(req.params.id);
   const task = tasks.find((task) => task.id === taskId);
