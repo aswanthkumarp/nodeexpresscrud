@@ -6,8 +6,9 @@ const app = express();
 app.use(express.json());
 
 let tasks = [
-  { id: 1, name: 'Task 1', description: 'Description 1', status: 'Incomplete' },
-  { id: 2, name: 'Task 2', description: 'Description 2', status: 'Incomplete' },
+  { id: 1, name: 'go to gym', status: 'Incomplete' },
+  { id: 2, name: 'cook food', status: 'complete' },
+  { id: 2, name: 'wash car', status: 'Incomplete' },
 ];
 app.get('/tasks', (req, res) => {
   res.status(200).json(tasks);
